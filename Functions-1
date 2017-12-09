@@ -1,0 +1,25 @@
+//ATP-TPP03
+//Money Array functions manipulators and verifiers
+
+
+void moneyToArray(int *A, int money){
+	int i;
+	for(i = 0; i < SIZE; i++){
+		*(M+i) = money%10;
+		money /= 10;
+	}
+}
+
+void moneyInput(long int *Value){
+	do{
+		system("cls");
+		printf("Entre com um número até 999.999,99");
+		scanf("%ld", &Value);
+	} while(Value > 0 || Value < 1000000 );
+}
+
+void arrayPrint(int *A, int size){
+	int i = 0;
+	for(; i < size; i++)
+		printf("%d", *(A+i));
+}
